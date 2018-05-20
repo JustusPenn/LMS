@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add User</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/dash.css">
+</head>
+
+<body onload="startTime()">
+
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="dash.html">Library Name</a>
+        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="dash.html">
+                                <span data-feather="home"></span> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="abook.html">
+                                <span data-feather="book"></span> Add Book
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="auser.html">
+                                <span data-feather="user"></span> Add User <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="books.html">
+                                <span data-feather="file"></span> Book Records
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="users.html">
+                                <span data-feather="users"></span> User Records
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="outbook.html">
+                                <span data-feather="layers"></span> Out Book Records
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Saved reports</span>
+                        <a class="d-flex align-items-center text-muted" href="#">
+                            <span data-feather="plus-circle"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="drecord.html">
+                                <span data-feather="file-text"></span> Daily
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="wrecord.html">
+                                <span data-feather="file-text"></span> Weekly
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mrecord.html">
+                                <span data-feather="file-text"></span> Monthly
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Add User</h1>
+                </div>
+
+                <!--main Row-->
+                <div class="row container-fluid">
+                    <div class="container">
+                        <!-- <div class="row">
+                            <div class="heda col-sm alert alert-info" role="alert">One of three columns</div>
+                            <div class="heda col-sm alert alert-warning" role="alert">One of three columns</div>
+                            <div class="heda col-sm alert alert-danger" role="alert">One of three columns</div>
+                        </div>
+                        <hr> -->
+                        <div class="row">
+                            <div class="wheda col-12">
+                                <div class="row">
+                                  <div class="col-3"></div>
+                                  <div class="col-6">
+                                    <form class="form-signin">
+                                      <br>
+                                      <div class="text-center mb-4">
+                                          <h1 class="h2 mb-3 font-weight-bold">User Registration</h1>
+                                      </div>
+                                  
+                                      <div class="form-label-group">
+                                          <input type="text" id="fName" class="form-control" placeholder="First Name" required autofocus>
+                                          <br>
+                                      </div>
+                      
+                                      <div class="form-label-group">
+                                          <input type="text" id="lName" class="form-control" placeholder="Last Name" required autofocus>
+                                          <br>
+                                      </div>
+                                      
+                                      <div class="form-label-group">
+                                        <label class="h5 mb-3 font-weight-normal" for="gender">Sex: </label> <br>
+                                          <label class="radio-inline"><input type="radio" name="gender"> Male</label>
+                                          <label class="radio-inline"><input type="radio" name="gender"> Female</label>
+                                          <br>
+                                      </div>
+                                          <br>
+                                      <div class="form-label-group">
+                                          <input type="email" id="email" class="form-control" placeholder="Email" required autofocus>
+                                          <br>
+                                      </div>
+                      
+                                      <div class="form-label-group">
+                                          <input type="tel" id="contact" class="form-control" placeholder="Contact" required autofocus>
+                                          <br>
+                                      </div>
+                                  
+                                      <div class="form-label-group">
+                                          <input type="text" id="address" class="form-control" placeholder="Address" required>
+                                          <br>
+                                      </div>
+          
+                                      <div class="text-center">
+                                          <button class="btn btn-lg btn-primary btn-md" type="submit" name="submit">Sign Up</button>
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="col-3"></div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <p class="float-left">Library Management System</p>
+                    <p class="float-right">&copy; Computer Engineering, COLTECH &dash; <span id="year"></span></p>
+                </footer>
+            </main>
+
+        </div>
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/feather.js"></script>
+    <script>
+        feather.replace()
+    </script>
+    <script>
+        //functions
+    </script>
+
+
+</body>
+
+</html>
